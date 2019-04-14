@@ -5,7 +5,19 @@
  */
 export default [
   {
+    path:'/',
+    redirect: {
+      name: 'login'
+    }
+  },
+  {
+    path: '/login',
+    name: 'login',
+    view: 'Login'
+  },
+  {
     path: '/dashboard',
+    name: 'dashboard',
     // Relative to /src/views
     view: 'Dashboard'
   },

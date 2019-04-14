@@ -2,4 +2,7 @@
 
 export default {
   //
+    token: false,
+    senha: '',
+    email: '',
 }
