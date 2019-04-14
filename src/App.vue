@@ -1,12 +1,16 @@
 <template>
   <v-app>
-    <core-filter />
+      <v-content v-if="!this.$store.getters.token">
+          <Login/>
+      </v-content>
 
-    <core-toolbar />
+    <core-filter v-if="this.$store.getters.token" />
 
-    <core-drawer />
+    <core-toolbar v-if="this.$store.getters.token" />
 
-    <core-view />
+    <core-drawer v-if="this.$store.getters.token"/>
+
+    <core-view v-if="this.$store.getters.token"/>
   </v-app>
 </template>
 
@@ -18,3 +22,20 @@
   vertical-align: unset;
 }
 </style>
+<script>
+    import Login from "./views/Login.vue";
+    export default {
+        components: {Login},
+        data() {
+            return {
+                authenticated:false,
+            }
+        },
+        mounted() {
+
+        },
+        methods: {
+
+        }
+    }
+</script>

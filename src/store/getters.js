@@ -2,4 +2,7 @@
 
 export default {
   //
+    token: state => state.token,
+    senha: state => state.senha,
+    email: state => state.email,
 }
