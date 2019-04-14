@@ -47,10 +47,11 @@
                 const form = new FormData();
                 form.append('email', this.email);
                 form.append('password', this.senha);
+                //set your api
                 axios.post('https://apigenerica/api/login', form)
                     .then((Response) => {
                         const token = Response.data.success.token;
-                        this.$store.commit('SET_TOKEN', token);
+                        this.$store.commit('SET_TOKEN', /* Set token */true);
                             this.$router.replace({ name:'dashboard'});
                         //console.log(Response);
                     })
