@@ -29,7 +29,7 @@
             />
           </v-list-tile-avatar>
           <v-list-tile-title class="title">
-            Vuetify MD
+            Vuetify
           </v-list-tile-title>
         </v-list-tile>
         <v-divider/>
@@ -58,16 +58,16 @@
           />
         </v-list-tile>
         <v-list-tile
-          disabled
           active-class="primary"
           class="v-list-item v-list__tile--buy"
-          to="/upgrade"
+          href="https://github.com/namespacedevs"
+          target="_blank"
         >
           <v-list-tile-action>
-            <v-icon>mdi-package-up</v-icon>
+            <v-icon>mdi-github-face</v-icon>
           </v-list-tile-action>
           <v-list-tile-title class="font-weight-light">
-            Upgrade To PRO
+            namespace
           </v-list-tile-title>
         </v-list-tile>
       </v-layout>
@@ -90,36 +90,6 @@ export default {
         to: '/dashboard',
         icon: 'mdi-view-dashboard',
         text: 'Dashboard'
-      },
-      {
-        to: '/user-profile',
-        icon: 'mdi-account',
-        text: 'User Profile'
-      },
-      {
-        to: '/table-list',
-        icon: 'mdi-clipboard-outline',
-        text: 'Table List'
-      },
-      {
-        to: '/typography',
-        icon: 'mdi-format-font',
-        text: 'Typography'
-      },
-      {
-        to: '/icons',
-        icon: 'mdi-chart-bubble',
-        text: 'Icons'
-      },
-      {
-        to: '/maps',
-        icon: 'mdi-map-marker',
-        text: 'Maps'
-      },
-      {
-        to: '/notifications',
-        icon: 'mdi-bell',
-        text: 'Notifications'
       }
     ],
     responsive: false
