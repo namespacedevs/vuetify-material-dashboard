@@ -58,17 +58,7 @@
           </v-flex>
           <v-flex xs12>
             <v-btn
-              href="https://www.creative-tim.com/product/vuetify-material-dashboard"
-              target="_blank"
-              color="success"
-              block
-            >
-              Free Download
-            </v-btn>
-          </v-flex>
-          <v-flex xs12>
-            <v-btn
-              href="https://demos.creative-tim.com/vuetify-material-dashboard/documentation"
+              href="https://github.com/namespacedevs/vue-dashboard-real-example"
               target="_blank"
               class="white--text"
               color="primary"
@@ -97,12 +87,14 @@
                 <v-btn
                   color="cyan"
                   class="v-btn-twitter"
+                  href="https://www.instagram.com/namespacedevs/"
+                  target="_blank"
                   fab
                   icon
                   small
                   round
                 >
-                  <v-icon>mdi-twitter</v-icon>
+                  <v-icon>mdi-instagram</v-icon>
                 </v-btn>
               </div>
             </div>

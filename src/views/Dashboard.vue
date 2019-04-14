@@ -6,91 +6,6 @@
   >
     <v-layout wrap>
       <v-flex
-        md12
-        sm12
-        lg4
-      >
-        <material-chart-card
-          :data="dailySalesChart.data"
-          :options="dailySalesChart.options"
-          color="info"
-          type="Line"
-        >
-          <h4 class="title font-weight-light">Daily Sales</h4>
-          <p class="category d-inline-flex font-weight-light">
-            <v-icon
-              color="green"
-              small
-            >
-              mdi-arrow-up
-            </v-icon>
-            <span class="green--text">55%</span>&nbsp;
-            increase in today's sales
-          </p>
-
-          <template slot="actions">
-            <v-icon
-              class="mr-2"
-              small
-            >
-              mdi-clock-outline
-            </v-icon>
-            <span class="caption grey--text font-weight-light">updated 4 minutes ago</span>
-          </template>
-        </material-chart-card>
-      </v-flex>
-      <v-flex
-        md12
-        sm12
-        lg4
-      >
-        <material-chart-card
-          :data="emailsSubscriptionChart.data"
-          :options="emailsSubscriptionChart.options"
-          :responsive-options="emailsSubscriptionChart.responsiveOptions"
-          color="red"
-          type="Bar"
-        >
-          <h4 class="title font-weight-light">Email Subscription</h4>
-          <p class="category d-inline-flex font-weight-light">Last Campaign Performance</p>
-
-          <template slot="actions">
-            <v-icon
-              class="mr-2"
-              small
-            >
-              mdi-clock-outline
-            </v-icon>
-            <span class="caption grey--text font-weight-light">updated 10 minutes ago</span>
-          </template>
-        </material-chart-card>
-      </v-flex>
-      <v-flex
-        md12
-        sm12
-        lg4
-      >
-        <material-chart-card
-          :data="dataCompletedTasksChart.data"
-          :options="dataCompletedTasksChart.options"
-          color="green"
-          type="Line"
-        >
-          <h3 class="title font-weight-light">Completed Tasks</h3>
-          <p class="category d-inline-flex font-weight-light">Last Last Campaign Performance</p>
-
-          <template slot="actions">
-            <v-icon
-              class="mr-2"
-              small
-            >
-              mdi-clock-outline
-            </v-icon>
-            <span class="caption grey--text font-weight-light">campaign sent 26 minutes ago</span>
-          </template>
-        </material-chart-card>
-      </v-flex>
-      <v-flex
         sm6
         xs12
         md6
@@ -98,9 +13,10 @@
       >
         <material-stats-card
           color="green"
-          icon="mdi-store"
-          title="Revenue"
-          value="$34,245"
+          icon="mdi-city"
+          model="institutions"
+          title="Institutions"
+          value="--"
           sub-icon="mdi-calendar"
           sub-text="Last 24 Hours"
         />
@@ -112,11 +28,11 @@
         lg3
       >
         <material-stats-card
-          color="orange"
-          icon="mdi-content-copy"
-          title="Used Space"
-          value="49/50"
-          small-value="GB"
+          color="info"
+          icon="mdi-domain"
+          model="blocks"
+          title="Blocks"
+          value="--"
           sub-icon="mdi-alert"
           sub-icon-color="error"
           sub-text="Get More Space..."
@@ -130,10 +46,11 @@
         lg3
       >
         <material-stats-card
-          color="red"
-          icon="mdi-information-outline"
-          title="Fixed Issues"
-          value="75"
+          color="purple"
+          icon="mdi-hexagon-outline"
+          model="rooms"
+          title="Rooms"
+          value="--"
           sub-icon="mdi-tag"
           sub-text="Tracked from Github"
         />
@@ -145,53 +62,18 @@
         lg3
       >
         <material-stats-card
-          color="info"
-          icon="mdi-twitter"
-          title="Followers"
-          value="+245"
+          color="orange"
+          icon="mdi-responsive"
+          model="equipments"
+          title="Equipments"
+          value="--"
           sub-icon="mdi-update"
           sub-text="Just Updated"
         />
       </v-flex>
       <v-flex
         md12
-        lg6
-      >
-        <material-card
-          color="orange"
-          title="Employee Stats"
-          text="New employees on 15th September, 2016"
-        >
-          <v-data-table
-            :headers="headers"
-            :items="items"
-            hide-actions
-          >
-            <template
-              slot="headerCell"
-              slot-scope="{ header }"
-            >
-              <span
-                class="font-weight-light text-warning text--darken-3"
-                v-text="header.text"
-              />
-            </template>
-            <template
-              slot="items"
-              slot-scope="{ index, item }"
-            >
-              <td>{{ index + 1 }}</td>
-              <td>{{ item.name }}</td>
-              <td class="text-xs-right">{{ item.salary }}</td>
-              <td class="text-xs-right">{{ item.country }}</td>
-              <td class="text-xs-right">{{ item.city }}</td>
-            </template>
-          </v-data-table>
-        </material-card>
-      </v-flex>
-      <v-flex
-        md12
-        lg6
+        lg12
       >
         <material-card
           class="card-tabs"
@@ -509,6 +391,7 @@
       complete(index) {
         this.list[index] = !this.list[index]
       }
-    }
+    } 
   };
+
 </script>
